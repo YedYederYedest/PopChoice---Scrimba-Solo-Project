@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopChoice - Movie AI App</title>
+     <link href="extra.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta name="Yuri Evgeni U. de Joya" content="PopChoice is an AI-powered movie recommendation app that helps you discover movies based on your preferences.">
+</head>
+<body class="bg-primary text-secondary min-h-screen flex items-center justify-center">
+  <div class="w-full max-w-lg bg-primary rounded-lg shadow-lg p-6 text-secondary"> 
+    
+    <!-- Logo -->
+    <div class="text-center mb-6">
+      <img src="logo.png" alt="PopChoice Logo" class="w-20 mx-auto">
+      <h1 class="text-3xl font-extrabold mt-4">PopChoice</h1>
+      <p class="text-secondary text-sm italic">Your AI-powered movie buddy!</p>
+    </div>
+
+    <!-- Question View -->
+    <div id="question-view">
+      <h2 class="text-xl font-semibold mb-4">What's your favorite movie?</h2>
+      <input
+        type="text"
+        id="favorite-movie"
+        class="w-full p-3 rounded-lg border border-secondary bg-primary text-secondary focus:outline-accent"
+        placeholder="e.g., The Shawshank Redemption"
+      />
+
+      <h2 class="text-xl font-semibold my-4">What type of storyline are you in the mood for?</h2>
+      <div class="flex flex-wrap gap-2">
+        <button class="storyline-option bg-secondary text-primary p-2 rounded-lg transition hover:bg-accent hover:text-white">
+          Inspirational
+        </button>
+        <button class="storyline-option bg-secondary text-primary p-2 rounded-lg transition hover:bg-accent hover:text-white">
+          Suspenseful
+        </button>
+        <button class="storyline-option bg-secondary text-primary p-2 rounded-lg transition hover:bg-accent hover:text-white">
+          Light-Hearted
+        </button>
+        <button class="storyline-option bg-secondary text-primary p-2 rounded-lg transition hover:bg-accent hover:text-white">
+          Emotional
+        </button>
+      </div>
+
+      <h2 class="text-xl font-semibold my-4">What tone do you prefer for your movie?</h2>
+      <div class="flex gap-4">
+        <button class="tone-option bg-secondary text-primary p-2 rounded-lg transition hover:bg-accent hover:text-white">
+          Fun & Adventurous
+        </button>
+        <button class="tone-option bg-secondary text-primary p-2 rounded-lg transition hover:bg-accent hover:text-white">
+          Serious & Dark
+        </button>
+      </div>
+
+      <h2 class="text-xl font-semibold my-4">Would you like a new or classic release?</h2>
+      <div class="flex gap-4">
+        <button class="release-option bg-secondary text-primary p-2 rounded-lg transition hover:bg-accent hover:text-white">
+          New (Last 5 years)
+        </button>
+        <button class="release-option bg-secondary text-primary p-2 rounded-lg transition hover:bg-accent hover:text-white">
+          Classic (Older)
+        </button>
+      </div>
+
+      <h2 class="text-xl font-semibold my-4">Pick your preferred genre:</h2>
+      <div class="flex flex-wrap gap-2">
+        <button class="genre-option bg-secondary text-primary p-2 rounded-lg transition hover:bg-accent hover:text-white" data-genre="28">
+          Action
+        </button>
+        <button class="genre-option bg-secondary text-primary p-2 rounded-lg transition hover:bg-accent hover:text-white" data-genre="35">
+          Comedy
+        </button>
+        <button class="genre-option bg-secondary text-primary p-2 rounded-lg transition hover:bg-accent hover:text-white" data-genre="10749">
+          Romance
+        </button>
+        <button class="genre-option bg-secondary text-primary p-2 rounded-lg transition hover:bg-accent hover:text-white" data-genre="53">
+          Thriller
+        </button>
+      </div>
+
+      <button
+        id="submit-button"
+        class="w-full mt-6 bg-accent text-primary font-bold py-3 rounded-lg hover:bg-green-500 transition"
+      >
+        Let's Go
+      </button>
+    </div>
+
+    <!-- Recommendation View -->
+    <div id="output-view" class="hidden">
+      <h2 class="text-2xl font-bold mb-4 text-center" id="movie-title">Loading...</h2>
+      <img id="movie-poster" class="w-full rounded-lg mb-4" src="" alt="Movie Poster">
+      <p id="movie-explanation" class="bg-primary text-secondary border border-secondary rounded-lg p-4">
+        Loading explanation...
+      </p>
+      <div id="movie-details" class="bg-primary text-secondary border border-secondary rounded-lg p-4 mt-4">
+        <!-- Movie details will be dynamically added here -->
+      </div>
+      <button
+        id="restart-button"
+        class="w-full mt-6 bg-accent text-primary font-bold py-3 rounded-lg hover:bg-green-500 transition"
+      >
+        Go Again
+      </button>
+    </div>
+  </div>
+  <script src="index.js"></script>
+    
+</body>
+</html>

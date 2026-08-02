@@ -1,0 +1,10 @@
+02/08/2026
+Had the help of this repo https://github.com/shirin44/pop-choice/tree/master/public
+
+Used it as a guide (held my hand) for the Scrimba Solo Project
+
+I ran out of keys doing this...
+
+As of right now the overall app can be run by running "node backend/app.js" in the terminal however, I need to figure out how to connect it so that the app actually recommends me specific movie recommendations and suggestions based on the things that I picked.
+
+Will extend this note, once I figure out a solution for my problem.
