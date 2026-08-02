@@ -16,6 +16,7 @@
     "@google/genai": "^2.15.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "openai": "^7.3.0"
   }
 }

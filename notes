@@ -8,3 +8,13 @@ I ran out of keys doing this...
 As of right now the overall app can be run by running "node backend/app.js" in the terminal however, I need to figure out how to connect it so that the app actually recommends me specific movie recommendations and suggestions based on the things that I picked.
 
 Will extend this note, once I figure out a solution for my problem.
+
+
+
+------------
+02/08/2026 - 9:15pm
+The problem was using Gemini (it was throwing the error because it already ran out of keys), so Gemini was already throwing out the error before letting OpenAI do the actual work. 
+
+The solution was removing gemini and just using the OpenAI packet. 
+
+Starting now only gonna use one AI model for good practice. (Will implement more AI models as I becomee more familiar with working with them)
